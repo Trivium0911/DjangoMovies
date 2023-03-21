@@ -120,7 +120,7 @@ class Rating(models.Model):
         RatingStar, verbose_name="звезда", on_delete=models.CASCADE
     )
     movie = models.ForeignKey(
-        Movie, verbose_name="фильм", on_delete=models.CharField
+        Movie, verbose_name="фильм", on_delete=models.CASCADE
     )
 
     def __str__(self):
