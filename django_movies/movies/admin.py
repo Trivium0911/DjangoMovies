@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Actor, Category, Genre, Movie, MovieScreen, Rating, \
+from .models import Actor, Category, Genre, Movie, MovieScreen, Rating, \
     RatingStar, Reviews
 
 
