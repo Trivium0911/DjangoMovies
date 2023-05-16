@@ -112,9 +112,9 @@
                 О фильме {{ movie.title }}
             </h3>
             <p>
-                <img src="bundles/images/about.jpg" class="img-fluid" alt="">
-                <img src="bundles/images/admin.jpg" class="img-fluid" alt="">
-                <img src="bundles/images/d1.jpg" class="img-fluid" alt="">
+                {% for screen in movie.moviescreen_set.all %}
+                <img src="{{ screen.image.url }}" class="img-movie-screen " alt="{{ screen.description }}">
+                {% endfor %}
             </p>
             <p class="editContent" style="outline: none; cursor: inherit;">
                 {{ movie.description }}
