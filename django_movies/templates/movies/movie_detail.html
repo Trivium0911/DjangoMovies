@@ -113,7 +113,7 @@
             </h3>
             <p>
                 {% for screen in movie.moviescreen_set.all %}
-                <img src="{{ screen.image.url }}" class="img-movie-screen " alt="{{ screen.description }}">
+                <img src="{{ screen.image.url }}" class="img-movie-screen" alt="{{ screen.description }}">
                 {% endfor %}
             </p>
             <p class="editContent" style="outline: none; cursor: inherit;">
@@ -139,14 +139,14 @@
                                     <span class="sub-tittle editContent"
                                           style="outline: none; cursor: inherit;">02</span>Оставить
                         отзыв</h3>
-                    <form action="#" method="get" class="mt-4">
+                    <form action="#" method="post" class="mt-4">
                         <div class="form-group editContent"
                              style="outline: none; cursor: inherit;">
                             <label for="contactcomment" class="editContent"
                                    style="outline: none; cursor: inherit;">Ваш
                                 комментарий
                                 *</label>
-                            <textarea class="form-control border" rows="5"
+                            <textarea class="form-control border" rows="5" name="text"
                                       id="contactcomment" required=""></textarea>
                         </div>
                         <div class="d-sm-flex">
@@ -155,7 +155,7 @@
                                 <label for="contactusername" class="editContent"
                                        style="outline: none; cursor: inherit;">Имя
                                     *</label>
-                                <input type="text" class="form-control border"
+                                <input type="text" class="form-control border" name="name"
                                        id="contactusername" required="">
                             </div>
                             <div class="col-sm-6 form-group ml-sm-3 editContent"
@@ -163,7 +163,7 @@
                                 <label for="contactemail" class="editContent"
                                        style="outline: none; cursor: inherit;">Email
                                     *</label>
-                                <input type="email" class="form-control border"
+                                <input type="email" class="form-control border" name="email"
                                        id="contactemail" required="">
                             </div>
                         </div>
